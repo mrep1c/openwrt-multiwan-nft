@@ -1,0 +1,13 @@
+*.apk
+*.ipk
+*.so
+*.so.*
+*.pyc
+*.exe
+*.code-workspace
+bin/
+build_dir/
+dl/
+logs/
+staging_dir/
+tmp/
