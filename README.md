@@ -25,6 +25,10 @@ MultiWAN QoS, and both LuCI apps.
 - Native interface binding fallback when the optional sockopt wrapper is not
   installed.
 
+If you customize `multiwan-nft.globals.mmx_mask`, keep the lower byte
+(`0x000000ff`) clear so MultiWAN QoS can preserve DSCP state in conntrack
+marks.
+
 ## Requirements
 
 - OpenWrt with Firewall 4 and nftables.
