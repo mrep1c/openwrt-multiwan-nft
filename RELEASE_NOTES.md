@@ -1,5 +1,18 @@
 # Release Notes
 
+## v1.0.3
+
+NFT process lifecycle hardening.
+
+- Makes each route-monitor parent own, terminate, and reap its `ip monitor`
+  child without an anonymous pipeline reader.
+- Uses private owner-validated workspaces so stale route-monitor FIFOs cannot
+  collide when the kernel reuses a forcibly killed parent's PID.
+- Disables procd respawn before fallback cleanup and recovers only exact
+  orphan route monitors adopted by PID 1.
+- Hardens tracking probe, sleep, and package-lock ownership against PID reuse.
+- Preserves existing policies, route handling, and address-family behavior.
+
 ## v1.0.2
 
 NFT route monitor cleanup hotfix on top of v1.0.1.
